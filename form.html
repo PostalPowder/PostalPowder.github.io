@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Sally's Cookbook</title>
+        <!-- 
+            Author: Keith Png (1644263)
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="Pictures/Icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Della+Respira|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="jquery-3.1.1.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="header-container">
+                <img id="header" src="Pictures/Header.jpg" alt="Banner">
+                <div id="sociallink-container">
+                    <a href="http://facebook.com">
+                        <img id="facebook" src="Pictures/Facebook_Icon.png" alt="Facebook" title="Facebook">
+                    </a>
+                    <a href="http://pinterest.com">
+                        <img id="pinterest" src="Pictures/Pinterest_Icon.png" alt="Pinterest" title="Pinterest">
+                    </a>
+                    <a href="http://twitter.com">
+                        <img id="twitter" src="Pictures/Twitter_Icon.png" alt="Twitter" title="Twitter">
+                    </a>
+                </div>
+                <div class="hamburger-container" onclick="openHamburger(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="search-header" onclick="openNav()">
+                    <img src="Pictures/SearchIcon.png" alt="Search Icon">
+                </div>
+            </div>
+        </header>
+        
+        <!-- Brown Line Decor When Screen Is Small -->
+        <div id="brownline"></div>
+        <!--  Brown Line Decor When Screen Is Small -->
+        
+        <!-- The Navigation Bar -->
+        <!-- Hamburger -->
+        <nav class="hamburger-panel">
+            <div class="hamsearchbar" onclick="openNav()">
+                <i class="fa fa-search"></i>
+            </div>
+            <ul class="hamburger-nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="form.html">Recipe Form</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <!-- End Of Hamburger -->
+        <nav class="navigation-bar">
+            <p><a href="index.html">Home</a></p>
+            <p><a href="recipes.html">Recipes</a></p>
+            <p><a href="aboutus.html">About us</a></p>
+            <p><a id="underline-nav" href="form.html">Recipe Form</a></p>
+            <p><a href="faq.html">FAQ</a></p>
+        </nav>
+        <!-- End of Navigation Bar -->
+        
+        <!-- Search Bar Function -->
+        <div id="searchTable" class="overlay">
+
+            <!-- Button to close the overlay for search bar -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <input type="text" id="searchInput" onkeyup="searchListFunction()">
+
+                <ul id="searchList">
+                    <li><a href="#" class="header">Breakfast</a></li>
+                    <li class="searchElements"><a href="oatsporridge.html">Oats Porridge</a></li>
+                    <li class="searchElements"><a href="overnightoats.html">Overnight Oats</a></li>
+                    <li class="searchElements"><a href="tomatobisque.html">Tomato Bisque</a></li>
+
+                    <li><a href="#" class="header">Dinner</a></li>
+                    <li class="searchElements"><a href="healthycarbonara.html">Healthy Carbonara</a></li>
+
+                    <li><a href="#" class="header">Dessert</a></li>
+                    <li class="searchElements"><a href="pancakewithicecream.html">Ice Cream Pancake</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End of Search Bar Function -->
+        <article id="form-container">
+            <h1 class="post-title">Submit your own recipe!</h1>
+            <h1 class="post-subtitle">Fill in this form:</h1>
+            <form action="results.html">
+                <fieldset class="contactinfo">
+                    <legend>Contact Information</legend>
+                    <label for="firstname">
+                        <div>First Name:</div>
+                        <input type="text" name="First Name" id="firstname" placeholder="First Name">
+                    </label>
+                    <label for="lastname">
+                        <div>Last Name:</div>
+                        <input type="text" name="Last Name" id="lastname" placeholder="Last Name">
+                    </label>
+                    <label for="email">
+                        <div>Email:</div>
+                        <input type="email" name="Email" id="email" placeholder="address@example.com">
+                    </label>
+                    <label for="phonenumber">
+                        <div>Phone:</div>
+                        <input type="tel" name="Phone Number" id="phonenumber">
+                    </label>
+                   </fieldset>
+                   <fieldset class="contactmethod">
+                       <legend>Preferred Contact Method</legend>
+                       <div class="contactmethod-button-container">
+                           <label for="mail">
+                                <input type="radio" name="Contact Method" id="mail" value="Email" checked="checked">
+                                    Email
+                           </label>
+                           <label for="phone">
+                                <input type="radio" name="Contact Method" id="phone" value="Phone">
+                                    Phone
+                           </label>
+                           <label for="either">
+                                <input type="radio" name="Contact Method" id="either" value="Either">
+                                    Either
+                           </label>
+                        </div>
+                    </fieldset>
+                    <fieldset class="aboutrecipe">
+                        <legend>About the Recipe</legend>
+                        <label for="recipetype">
+                            <div>Recipe Type:</div>
+                            <select id="recipetype">
+                                <option value="Breakfast">Breakfast</option>
+                                <option value="Lunch">Lunch</option>
+                                <option value="Dinner">Dinner</option>
+                                <option value="Dessert">Dessert</option>
+                            </select>
+                        </label>
+                        <label for="preptime">
+                            <div>Prep Time (minutes): </div>
+                            <input type=number name="Prep Time" id="preptime">
+                        </label>
+                        <label for="cookingtime">
+                            <div>Cooking Time (minutes): </div>
+                            <input type=number name="Cooking Time" id="cookingtime">
+                        </label>
+                    </fieldset>
+                    <fieldset class="ingridients">
+                        <legend>Ingredients</legend>
+                        <div class="textarea-container">
+                            <label for="ingridients">
+                                List Ingredients:
+                            </label>
+                            <textarea name="Additional Information" id="ingridients" rows=8></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset class="steps">
+                        <legend>Procedure</legend>
+                        <div class="textarea-container">
+                            <label for="procedure">
+                                Step by step instructions:
+                            </label>
+                            <textarea name="Procedure" id="procedure" rows=8></textarea>
+                        </div>   
+                   </fieldset>
+                    <fieldset class="submitbutton">
+                        <input type="submit" id="submit" value="Submit">
+                   </fieldset>
+                </form>
+        </article>
+        <!-- Start Of Footer-->
+        <footer>
+            <a href="#top">Back to top</a>
+            <p>Copyright 2016 &copy;</p>
+        </footer>
+        <!-- End Of Footer-->
+        <!-- JavaScript -->
+        <script src="javascript.js"></script>
+    </body>
+</html>

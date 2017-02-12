@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Sally's Cookbook</title>
+        <!-- 
+            Author: Keith Png (1644263)
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="Pictures/Icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Della+Respira|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="jquery-3.1.1.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="header-container">
+                <img id="header" src="Pictures/Header.jpg" alt="Banner">
+                <div id="sociallink-container">
+                    <a href="http://facebook.com">
+                        <img id="facebook" src="Pictures/Facebook_Icon.png" alt="Facebook" title="Facebook">
+                    </a>
+                    <a href="http://pinterest.com">
+                        <img id="pinterest" src="Pictures/Pinterest_Icon.png" alt="Pinterest" title="Pinterest">
+                    </a>
+                    <a href="http://twitter.com">
+                        <img id="twitter" src="Pictures/Twitter_Icon.png" alt="Twitter" title="Twitter">
+                    </a>
+                </div>
+                <div class="hamburger-container" onclick="openHamburger(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="search-header" onclick="openNav()">
+                    <img src="Pictures/SearchIcon.png" alt="Search Icon">
+                </div>
+            </div>
+        </header>
+        
+        <!-- Brown Line Decor When Screen Is Small -->
+        <div id="brownline"></div>
+        <!--  Brown Line Decor When Screen Is Small -->
+        
+        <!-- The Navigation Bar -->
+        <!-- Hamburger -->
+        <nav class="hamburger-panel">
+            <div class="hamsearchbar" onclick="openNav()">
+                <i class="fa fa-search"></i>
+            </div>
+            <ul class="hamburger-nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="form.html">Recipe Form</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <!-- End Of Hamburger -->
+        <nav class="navigation-bar">
+            <p><a href="index.html">Home</a></p>
+            <p><a id="underline-nav" href="recipes.html">Recipes</a></p>
+            <p><a href="aboutus.html">About us</a></p>
+            <p><a href="form.html">Recipe Form</a></p>
+            <p><a href="faq.html">FAQ</a></p>
+        </nav>
+        <!-- End of Navigation Bar -->
+        
+        <!-- Search Bar Function -->
+        <div id="searchTable" class="overlay">
+
+            <!-- Button to close the overlay for search bar -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <input type="text" id="searchInput" onkeyup="searchListFunction()">
+
+                <ul id="searchList">
+                    <li><a href="#" class="header">Breakfast</a></li>
+                    <li class="searchElements"><a href="oatsporridge.html">Oats Porridge</a></li>
+                    <li class="searchElements"><a href="overnightoats.html">Overnight Oats</a></li>
+                    <li class="searchElements"><a href="tomatobisque.html">Tomato Bisque</a></li>
+
+                    <li><a href="#" class="header">Dinner</a></li>
+                    <li class="searchElements"><a href="healthycarbonara.html">Healthy Carbonara</a></li>
+
+                    <li><a href="#" class="header">Dessert</a></li>
+                    <li class="searchElements"><a href="pancakewithicecream.html">Ice Cream Pancake</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End of Search Bar Function -->
+        
+        <!-- Start Of Main Content -->
+        <article id="food-container">
+            <h1 class="post-title">Breakfast:</h1>
+            <h1 class="post-title">Oats Porridge</h1>
+            <p class="date">4 Jan 2017</p>
+            <img id="recent-post-image" src="Pictures/PlateWheat.jpg" alt="Oats Porridge">
+            <p class="post-text">
+                <span class="bold">Ingredients:</span><br>1/4 Cup of Rolled Oats<br>1/2 Cup of Almond Milk (Milk of Choice)<br>1 Tsp Honey<br>1/3 of a Ripe Banana<br>1 Large Strawberry<br>4-5 Almonds<br>1 Tbs Peanut Butter<br>2-3 Strawberries<br>2-3 Figs<br>1 Whole Banana<br>10-12 Almonds<br>1 Tsp Chia Seeds<br><br><span class="bold">Prep Time:</span> 5 Minutes<br><br><span class="bold">Cooking Time:</span> 20 Minutes<br><br><span class="bold">Steps:</span><br>1.	Heat Milk till it boils and add oats into the milk<br>2. Heat under medium heat till Oats are cooked till preferred done-ness<br>3.	Mix Honey into the cooked oats<br>4. Cut up fruits and garnish<br>5. Add Almonds and Chia Seeds for a boost of energy
+            </p>
+        </article>
+        <!-- End Of Main Content -->
+        
+        <!-- Start Of Footer-->
+        <footer>
+            <a href="#top">Back to top</a>
+            <p>Copyright 2016 &copy;</p>
+        </footer>
+        <!-- End Of Footer-->
+        <!-- JavaScript -->
+        <script src="javascript.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

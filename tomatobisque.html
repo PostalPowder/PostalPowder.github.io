@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Sally's Cookbook</title>
+        <!-- 
+            Author: Keith Png (1644263)
+        -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="Pictures/Icon.png">
+        <link href="https://fonts.googleapis.com/css?family=Della+Respira|Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="jquery-3.1.1.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="header-container">
+                <img id="header" src="Pictures/Header.jpg" alt="Banner">
+                <div id="sociallink-container">
+                    <a href="http://facebook.com">
+                        <img id="facebook" src="Pictures/Facebook_Icon.png" alt="Facebook" title="Facebook">
+                    </a>
+                    <a href="http://pinterest.com">
+                        <img id="pinterest" src="Pictures/Pinterest_Icon.png" alt="Pinterest" title="Pinterest">
+                    </a>
+                    <a href="http://twitter.com">
+                        <img id="twitter" src="Pictures/Twitter_Icon.png" alt="Twitter" title="Twitter">
+                    </a>
+                </div>
+                <div class="hamburger-container" onclick="openHamburger(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div class="search-header" onclick="openNav()">
+                    <img src="Pictures/SearchIcon.png" alt="Search Icon">
+                </div>
+            </div>
+        </header>
+        
+        <!-- Brown Line Decor When Screen Is Small -->
+        <div id="brownline"></div>
+        <!--  Brown Line Decor When Screen Is Small -->
+        
+        <!-- The Navigation Bar -->
+        <!-- Hamburger -->
+        <nav class="hamburger-panel">
+            <div class="hamsearchbar" onclick="openNav()">
+                <i class="fa fa-search"></i>
+            </div>
+            <ul class="hamburger-nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="form.html">Recipe Form</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+        <!-- End Of Hamburger -->
+        <nav class="navigation-bar">
+            <p><a href="index.html">Home</a></p>
+            <p><a id="underline-nav" href="recipes.html">Recipes</a></p>
+            <p><a href="aboutus.html">About us</a></p>
+            <p><a href="form.html">Recipe Form</a></p>
+            <p><a href="faq.html">FAQ</a></p>
+        </nav>
+        <!-- End of Navigation Bar -->
+        
+        <!-- Search Bar Function -->
+        <div id="searchTable" class="overlay">
+
+            <!-- Button to close the overlay for search bar -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <input type="text" id="searchInput" onkeyup="searchListFunction()">
+
+                <ul id="searchList">
+                    <li><a href="#" class="header">Breakfast</a></li>
+                    <li class="searchElements"><a href="oatsporridge.html">Oats Porridge</a></li>
+                    <li class="searchElements"><a href="overnightoats.html">Overnight Oats</a></li>
+                    <li class="searchElements"><a href="tomatobisque.html">Tomato Bisque</a></li>
+
+                    <li><a href="#" class="header">Dinner</a></li>
+                    <li class="searchElements"><a href="healthycarbonara.html">Healthy Carbonara</a></li>
+
+                    <li><a href="#" class="header">Dessert</a></li>
+                    <li class="searchElements"><a href="pancakewithicecream.html">Ice Cream Pancake</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- End of Search Bar Function -->
+        
+        <!-- Start Of Main Content -->
+        <article id="food-container">
+            <h1 class="post-title">Breakfast:</h1>
+            <h1 class="post-title">Tomato Bisque</h1>
+            <p class="date">17 Jan 2017</p>
+            <img id="recent-post-image" src="Pictures/TomatoBisque.jpg" alt="Tomato Bisque">
+            <p class="post-text">
+                <span class="bold">Ingredients:</span><br>2 Cans of Diced Tomatoes<br>2 Large Fresh Tomatoes<br>1 Roasted Capsicum<br>1 Tbs of Vegetable Oil<br>1 Large Onion, Chopped<br>1/4 Cup of Cooking Cream<br>2 Cups of Chicken Stock<br>1 Bay Leaf<br>Salt and Pepper to Taste<br>A Pinch Cayenne Pepper <br><br><span class="bold">Prep Time:</span> 30 Minutes<br><br><span class="bold">Cooking Time:</span> 1 Hour<br><br><span class="bold">Serves:</span> 4-5<br><br><span class="bold">Steps:</span><br>1. Roast Capsicum under flames till charred<br>2. Put Capsicum into a bowl and cover with plastic wrap to let it steam<br>3. After 10 minutes, peel charred skin off the Capsicum and remove the stem and seeds<br>4. Add Vegetable Oil in a large pot and fry onions till translucent<br>5. Add Diced fresh tomatoes and fry till soften<br>6. Pour the cans of diced tomatoes into the pot<br>7. Add Bay leaf, roasted pepper and chicken stock into the pot and boil<br>8. Simmer the soup for 45 minutes<br>9. After 45 minutes, blend the soup in the blender till smooth<br>10. Add the soup back into the pot and heat again<br>11. When heated, add cooking cream and mix<br>12. Season with salt, Pepper and Cayenne pepper<br>13. Garnish with Chives or Cheese and eat along a side of toasted baguette
+            </p>
+        </article>
+        <!-- End Of Main Content -->
+        
+        <!-- Start Of Footer-->
+        <footer>
+            <a href="#top">Back to top</a>
+            <p>Copyright 2016 &copy;</p>
+        </footer>
+        <!-- End Of Footer-->
+        <!-- JavaScript -->
+        <script src="javascript.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1230 @@
+/* Keith Png Jun Xin (1644263)*/
+
+/* To Clear All Predefined Stuff */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Set Background */
+html {
+    background-color: #FFF8DC;
+    overflow-x: hidden;
+}
+
+/* To make things unhighlightable */
+.unhighlightable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* End Of To make things unhighlightable */
+.bold {
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+/* Start Of Header */
+#header-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 165px;
+}
+
+#header {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#sociallink-container {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+}
+
+#sociallink-container a {
+    text-decoration: none;
+}
+
+#sociallink-container img {
+    transition: all 0.3s;
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+}
+
+#sociallink-container img:hover {
+    opacity: 0.8;
+}
+
+.search-header {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+/* End Of Header */
+
+/* Start Of Navigation For Phones */
+
+/* Hamburger */
+.hamburger-container {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+    display: none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #2E0F00;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+/* End Of Hamburger */
+.hamburger-panel {
+    background-color: #430909;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+}
+
+.hamsearchbar {
+    position: relative;
+    margin-top: 3px;
+    width: 98%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    background-color: rgba(255,248,220,0.65);
+    transition: all 0.5s;
+}
+
+.hamsearchbar i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    width: 100%;
+    font-size: 35px;
+    color: rgba(67,9,9,0.6);
+    transition: all 0.5s;
+}
+
+.hamsearchbar:hover {
+    background-color: rgba(255,248,220,0.7);
+}
+
+.hamsearchbar i:hover {
+    color: rgba(67,9,9,0.8);
+}
+
+.hamburger-nav-list li {
+    margin: 5px 0 5px 2%;
+    list-style: none;
+}
+
+.hamburger-nav-list a {
+    text-decoration: none;
+    color: #FFF8DC;
+    font-size: 22px;
+    text-align: left;
+    width: 98%;
+}
+/* End Of Navigation For Phones */
+
+/* Start Of Nav Bar */
+nav.navigation-bar {
+    text-align: center;
+    background-color: #430909;
+}
+
+nav.navigation-bar p {
+    display: inline-block;
+    padding: 5px 5%;
+    font-size: 22px;
+    font-family: 'Della Respira', serif;
+    font-weight: 500;
+}
+
+nav.navigation-bar a {
+    color: #FFF8DC;
+    text-decoration: none;
+}
+
+
+#underline-nav {
+    text-decoration: underline;
+}
+
+nav a:hover {
+    color: #C49271;
+}
+
+/* End Of Nav Bar */
+
+#brownline {
+    background-color: #430909;
+    height: 0;
+}
+
+/* Start Of Search Bar And Banner*/
+
+#search-and-banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#banner {
+    position: relative;
+    height: 555px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#searchbar-container {
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    transform: translateX(-50%);
+}
+
+#searchbar-container p {
+    font-size: 80px;
+    font-family: 'Della Respira', serif;
+    font-weight: 500;
+    color: #FFF8DC;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.searchbar {
+    position: relative;
+    height: 60px;
+    background-color: rgba(255,248,220,0.4);
+    transition: all 0.5s;
+}
+
+.searchbar i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    width: 530px;
+    font-size: 50px;
+    color: rgba(67,9,9,0.6);
+    transition: all 0.5s;
+}
+
+.searchbar:hover {
+    background-color: rgba(255,248,220,0.7);
+}
+
+.searchbar i:hover {
+    color: rgba(67,9,9,0.8);
+}
+/* End Of Search Bar And Banner */
+
+/* For Drop Down Search */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    width: 50%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: left;
+    margin-top: 30px;
+    height: 65%;
+}
+
+#searchInput {
+    background-image: url('Pictures/Seach_Icon.png'); /* Add a search icon to input */
+    background-position: 8px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    background-color: rgba(255,248,220,0.7);
+    width: 100%; /* Full-width */
+    font-size: 20px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #430909;
+    margin-bottom: 12px; /* Add some space below the input */
+    color: #430909;
+    overflow: hidden;
+}
+
+#searchList {
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#searchList li a {
+    border: 1px solid #430909;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: rgba(255,248,220,0.6);
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: #430909; 
+    display: block; /* Make it into a block element to fill the whole list */
+    transition: all 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+#searchList li a.header {
+    background-color: rgba(67,9,9,0.7); /* Add a darker background color for headers */
+    color: #FFF8DC;
+    cursor: default; /* Change cursor style */
+}
+
+#searchList li a:hover:not(.header) {
+    background-color: rgba(255,248,220,0.9); /* Add a hover effect to all links, except for headers */
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25%;
+    font-size: 60px;
+    text-decoration: none;
+    color: rgba(255,248,220,0.6);
+}
+/* End Of Drop Down Search */
+
+#main-content-container {
+    position: relative;
+    max-width: 1280px;
+    min-width: 1020px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Article Start */
+#article-container {
+    margin-top: 30px;
+    width: 70%;
+    float: left;
+}
+
+#recent-post .post-title {
+    text-align: center;
+    font-family: 'Della Respira', serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: #430909;
+}
+
+#recent-post p:first-of-type {
+    text-align: center;
+    font-family: 'Della Respira', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #430909;
+    height: 22px;
+}
+
+#recent-post-image {
+    margin-top: 10px;
+    position: relative;
+    width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.post-text {
+    position: relative;
+    margin: 5px 0 10px 0;
+    text-align: justify;
+    width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    color: #430909;
+}
+/* Article End */
+
+/* Pagination For Article Start */
+nav.paging {
+    margin: 20px 0 20px 0;
+    position: relative;
+    width: 700px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pagination {
+    text-align: right;
+    position: relative;
+    font-weight: bold;
+}
+
+.pagination p {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+
+.pagination a {
+    border: 3px solid #430909;
+    color: #FFF8DC;
+    background-color: #430909;
+    float: left;
+    padding: 1px 9px;
+    text-decoration: none;
+}
+
+.pagination a:hover, #selected {
+    color: #430909;
+    background-color: #FFF8DC;
+}
+/* Pagination For Article End */
+
+/* Aside Start */
+#sidebar {
+    margin-top: 30px;
+    width: 30%;
+    float: right;
+}
+
+#sidebar-title {
+    text-align: center;
+    font-family: 'Della Respira', serif;
+    font-size: 26px;
+    text-decoration: underline;
+    font-weight: bolder;
+    color: #430909;
+    margin-bottom: 32px;
+}
+
+.sidebar-picture {
+    position: relative;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#sidebar figcaption {
+    text-align: center;
+    font-family: 'Della Respira', serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #430909;
+    margin-bottom: 32px;
+}
+
+#sidebar figure {
+    margin-bottom: 30px;
+}
+/* Aside End */
+
+/* Footer Start */
+footer {
+    background-color: #430909;
+    height: 40px;
+    clear: both;
+}
+
+footer p {
+    position: relative;
+    height: 30px;
+    margin-top: 5px;
+    left: 10px;
+    float: left;
+    font-family: 'Della Respira', serif;
+    font-size: 20px;
+    color: #FFF8DC;
+}
+
+footer a {
+    position: relative;
+    height: 30px;
+    margin-top: 5px;
+    right: 10px;
+    float: right;
+    text-decoration: none;
+    font-family: 'Della Respira', serif;
+    font-size: 20px;
+    color: #FFF8DC;
+}
+/* Footer End */
+
+/* Food Page Styles */
+#food-container {
+    position: relative;
+    max-width: 1280px;
+    margin-top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#food-container .post-title {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Della Respira', serif;
+    color: #430909;
+}
+
+#food-container .date {
+    text-align: center;
+    font-family: 'Della Respira', serif;
+    color: #430909;
+    font-size: 20px;
+    font-weight: 500;
+}
+/* End Of Food Page Styles */
+
+/* Form Page Styles */
+#form-container {
+    position: relative;
+    width: 50%;
+    margin-top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#form-container .post-title {
+    text-align: left;
+    font-size: 34px;
+    font-family: 'Della Respira', serif;
+    color: #430909;
+}
+
+#form-container .post-subtitle {
+    text-align: left;
+    font-size: 30px;
+    font-family: 'Della Respira', serif;
+    color: #430909;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input {
+    font-family: 'Roboto', sans-serif;
+}
+
+form textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+fieldset {
+    border: solid 2px #430909;
+    padding: 10px 0 10px 0;
+    margin-bottom: 10px;
+}
+
+legend {
+    font-weight: bold;
+    font-family: 'Della Respira', serif;
+    font-size: 26px;
+    color: #430909;
+    margin-left: 5px;
+    padding: 2px;
+}
+
+.contactinfo label {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Della Respira', serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 10px 0 10px 0;
+    color: #430909;
+    display: block;
+    width: 70%;
+}
+
+.contactinfo div {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+.contactinfo input {
+    width: calc(100% - 110px);
+    border: 1px solid #430909;
+    padding: 2px;
+}
+
+.contactmethod label {
+    margin-left: 10px;
+    font-family: 'Della Respira', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #430909;
+}
+
+.contactmethod-button-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 230px;
+}
+
+.aboutrecipe label {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Della Respira', serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 15px 0 15px 0;
+    color: #430909;
+    display: block;
+    width: 70%;
+}
+
+.aboutrecipe div {
+    text-align: left;
+    display: inline-block;
+    width: 180px;
+}
+
+.aboutrecipe select {
+    width: calc(100% - 190px);
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #430909;
+}
+
+.aboutrecipe input {
+    width: calc(100% - 190px);
+    border: 1px solid #430909;
+}
+
+.ingridients label {
+    display: block;
+    font-family: 'Della Respira', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #430909;
+    margin-bottom: 2px;
+}
+
+.steps label {
+    display: block;
+    font-family: 'Della Respira', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #430909;
+    margin-bottom: 2px;
+}
+
+.textarea-container {
+    position: relative;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.textarea-container textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: 1px solid #430909;
+}
+
+.submitbutton {
+    border: 0;
+    text-align: center;
+}
+
+#submit {
+    padding: 3px;
+    background-color: #430909;
+    border: 2px solid #430909;
+    font-family: 'Della Respira', serif;
+    font-size: 18px;
+    color: #FFF8DC;
+}
+/* End Of Form Page Styles */
+
+/* Form Result */
+#formresult {
+    position: relative;
+    width: 60%;
+    margin-top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#formresult h1 {
+    text-align: center;
+    font-size: 34px;
+    font-family: 'Della Respira', serif;
+    color: #430909;
+}
+
+#formresult h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Della Respira', serif;
+    color: #430909;
+}
+
+#formresult p {
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #430909;
+    padding: 10px 0 10px 0;
+}
+/* End Of Form Result */
+
+/* Recipe Page */
+#recipe-page-container {
+    position: relative;
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#recipe-page-container h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    font-family: 'Della Respira', serif;
+    color: #430909;
+}
+
+#recipe-page-container h2 {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Della Respira', serif;
+    color: #430909;
+}
+
+.type-container {
+    border: 2px solid #430909;
+    padding: 3px;;
+    width: 100%;
+    font-size: 0;
+    margin-bottom: 10px;
+}
+
+.type-container figure {
+    width: 49%;
+    display: inline-block;
+}
+
+.rightimage {
+    margin-left: 2%;
+}
+
+.type-container figcaption {
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Della Respira', serif;
+    font-weight: bold;
+    color: #430909;
+}
+
+.type-container img {
+    width: 100%;
+}
+
+.button-container {
+    margin-top: 5px;
+    text-align: right;
+}
+
+.viewmorebutton {
+    padding: 3px;
+    width: 120px;
+    background-color: #430909;
+    border: 2px solid #430909;
+    font-family: 'Della Respira', serif;
+    font-size: 18px;
+    text-align: left;
+    color: #FFF8DC;
+    transition: all 0.3s;
+}
+
+.viewmorebutton:hover {
+    color: #430909;
+    background-color: #FFF8DC;
+}
+
+.viewmorebutton:after {
+    content: '\002B';
+    float: right;
+}
+
+.viewmorebutton.active:after {
+    content: '\2212';
+}
+
+.viewmorepanel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+}
+/* End Of Recipe Page */
+
+/* About Us Page */
+#about-content {
+    position: relative;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#about-content h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    font-family: 'Della Respira', serif;
+    color: #430909;
+    margin-top: 10px;
+}
+
+#about-content p {
+    text-align: left;
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif; 
+    color: #430909;
+    text-align: justify;
+}
+
+.map-user-input-container #locationpicker {
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #430909;
+    height: 30px;
+    width: 150px;
+    background-color: #FFF8DC;
+    border: 1px solid #430909;
+}
+.map-user-input-container .locationbutton-container {
+    display: inline-block;
+}
+
+.map-user-input-container #locationbutton {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #430909;
+    color: #FFF8DC;
+    height: 30px;
+    width: 150px;
+    border: 1px solid #430909;
+    margin-bottom: 5px;
+    transition: all 0.3s;
+}
+
+.map-user-input-container #locationbutton:hover {
+    background-color: #FFF8DC;
+    color: #430909;
+}
+
+.mapdiv {
+    margin-bottom: 10px;
+}
+/* End Of About Us Page */
+
+/* Start Of FAQ Page */
+#faqcontent {
+    position: relative;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#faqcontent h1 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 30px;
+    font-family: 'Della Respira', serif;
+    color: #430909;
+    margin-top: 10px;
+}
+
+#faqcontent p {
+    text-align: left;
+    margin: 10px 0 10px 0;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif; 
+    color: #430909;
+    text-align: justify;
+}
+
+.slider-container {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+}
+
+.slider-container img {
+    width: 100%;
+}
+/* End Of FAQ Page */
+
+#construction h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Della Respira', serif;
+    color: #430909;
+}
+
+@media screen and (max-width: 1040px){
+    #faqcontent {
+        width: 70%;
+    }
+    
+    #faqcontent h1 {
+        font-size: 26px;
+    }
+    
+    #faqcontent p {
+        font-size: 18px;
+    }
+    
+    #about-content {
+        width: 70%;
+    }
+    
+    #about-content h1 {
+        font-size: 26px;
+    }
+    
+    #about-content p {
+        font-size: 18px;
+    }
+    
+    #form-container {
+        width: 70%;
+    }
+        
+    #recipe-page-container figcaption {
+        font-size: 18px;
+    }
+    
+    #recipe-page-container {
+        width: 70%;
+    }
+    
+    #formresult {
+        width: 60%;
+    }
+    
+    #formresult p {
+        font-size: 16px;
+    }
+    
+    #sidebar {
+        display: none;
+    }
+    
+    #article-container {
+        width: 100%;
+        float: none;
+    }
+    
+    #main-content-container {
+        max-width: none;
+        min-width: 0;
+    }
+    
+    #banner {
+        left: 55%;
+    }
+    
+    #searchbar-container {
+        left: 62.5%; 
+    }
+}
+
+@media screen and (max-width: 900px){
+    #header-container {
+        height: 140px;
+    }
+    
+    .slider-container {
+       width: 80%;
+    }
+    
+    #faqcontent {
+        width: 80%;
+    }
+    
+    #faqcontent h1 {
+        font-size: 24px;
+    }
+    
+    #about-content {
+        width: 80%;
+    }
+    
+    #about-content h1 {
+        font-size: 24px;
+    }
+    
+    #formresult {
+        width: 80%;
+    }
+    
+    #formresult h1 {
+        font-size: 26px;
+    }
+    
+    #formresult h2 {
+        font-size: 22px;
+    }
+    
+    #formresult p {
+        font-size: 16px;
+    }
+    
+    nav.navigation-bar p {
+        padding: 5px 4%;
+    }
+    
+    #header {
+        height: 140px;
+    }
+    
+    #banner {
+        left: 20%;
+        height: 400px;
+        width: 1920px;
+    }
+    
+    #searchbar-container {
+        left: 50%; 
+    }
+    
+    .post-text {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #search-and-banner {
+        display: none;
+    }
+    
+    .slider-container {
+       width: 90%;
+    }
+    #recipe-page-container figcaption {
+        font-size: 18px;
+    }
+    
+    #form-container {
+        width: 90%;
+    }
+    
+    #faqcontent {
+        width: 90%;
+    }
+    
+    #faqcontent p {
+        font-size: 16px;
+    }
+    
+    #about-content p {
+        font-size: 16px;
+    }
+    
+    #about-content {
+        width: 90%;
+    }
+    
+    #recipe-page-container {
+        width: 80%;
+    }
+    
+    #sociallink-container img {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .search-header {
+        display: none;
+    }
+    
+    #brownline {
+        height: 2px;
+    }
+    
+    .navigation-bar {
+        display: none;
+    }
+    
+    .hamburger-container {
+        display: inline-block;
+    }
+    
+    .contactinfo label {
+        width: 80%;
+    }
+    
+    .aboutrecipe label {
+        width: 80%;
+    }
+    
+    .textarea-container {
+        width: 80%;
+    }
+    
+    #recent-post-image {
+        width: 95%;
+    }
+    
+    .post-text {
+        width: 95%;
+        font-size: 18px;
+    }
+    
+    nav.paging {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    #formresult {
+        width: 90%;
+    }
+    
+    #recipe-page-container {
+        width: 90%;
+    }
+    
+    #faqcontent h1 {
+        font-size: 22px;
+    }
+    
+    #about-content h1 {
+        font-size: 22px;
+    }
+    
+    .map-user-input-container #locationpicker {
+        font-size: 16px;
+        width: 130px;
+    }
+    
+    .map-user-input-container #locationbutton {
+        font-size: 16px;
+        width: 130px;
+    }
+    
+    #recipe-page-container figcaption {
+        font-size: 14px;
+    }
+    
+    .viewmorebutton {
+        width: 90px;
+        font-size: 12px;
+    }
+    
+    #formresult h1 {
+        font-size: 18px;
+    }
+    
+    #formresult h2 {
+        font-size: 16px;
+    }
+    
+    #formresult p {
+        font-size: 12px;
+    }
+    
+    .post-text {
+        font-size: 16px;
+    }
+    
+    #header-container {
+        height: 120px;
+    }
+    
+    #header {
+        height: 120px;
+    }
+    
+    .contactinfo label {
+        width: 90%;
+    }
+    
+    .aboutrecipe label {
+        width: 90%;
+    }
+    
+    .aboutrecipe div {
+        width: 100px;
+    }
+    
+    .aboutrecipe select {
+        width: calc(100% - 110px);
+    }
+
+    .aboutrecipe input {
+        width: calc(100% - 110px);
+    }
+
+    .textarea-container {
+        width: 90%;
+    }
+    
+    #sociallink-container img {
+        height: 36px;
+        width: 36px;
+        display: block;
+    }
+    
+    footer a, footer p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
