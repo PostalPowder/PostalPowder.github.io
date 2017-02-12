@@ -72,19 +72,6 @@ function searchListFunction() {
 }
 /* End Of Search List Function */
 
-/* Start Of Function That Refreshes Page For IE When Screen Is Resized */
-window.addEventListener('resize', function () { 
-    if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
-        "use strict";
-        window.location.reload(); 
-    }
-});
-/* End Of Function That Refreshes Page For IE When Screen Is Resized */
-
-/* WhatsNearby jQueryUI */
-/* Could not search for Supermarkets and Grocery Store, Google deprecated the placesTypes 'grocery_or_supermarket', they will remove it on 16 Feb. Got to check at that date if they will add anything that will replace. So right now I am afraid that you will mark this at a later date (16 Feb) so I've decided to change to search for convenience stores instead. */
-
-
 /* Start Of Slide Show */
 $(document).ready(function () {
     $('.bxslider').bxSlider({
@@ -96,6 +83,19 @@ $(document).ready(function () {
 });
 /* End Of Slide Show */
 
+/* Start Of Function That Refreshes Page For IE When Screen Is Resized */
+window.addEventListener('resize', function () { 
+    if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+        "use strict";
+        window.location.reload(); 
+    }
+});
+/* End Of Function That Refreshes Page For IE When Screen Is Resized */
+
+
+
+/* WhatsNearby jQueryUI */
+/* Could not search for Supermarkets and Grocery Store, Google deprecated the placesTypes 'grocery_or_supermarket', they will remove it on 16 Feb. Got to check at that date if they will add anything that will replace. So right now I am afraid that you will mark this at a later date (16 Feb) so I've decided to change to search for convenience stores instead. */
 function printMap() {
     var e = document.getElementById("locationpicker");
     var strUser = e.options[e.selectedIndex].value;
